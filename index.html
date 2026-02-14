@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="manifest" href="manifest.json">
-<title>Moto Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<title>Moto Control</title>
 </head>
 <body>
-<h1 id="kmAtual">0</h1>
+
+<div class="container">
+
+<h1>Moto Dashboard</h1>
+
+<div class="card">
+  <h2>KM Atual</h2>
+  <div id="kmAtual">0</div>
+  <button onclick="manualKmUpdate()">Atualizar KM Manual</button>
+</div>
+
+<div class="card">
+  <h2>Autonomia Estimada</h2>
+  <div id="autonomia">0 km</div>
+</div>
+
+<div class="card">
+  <h2>Combustível Restante</h2>
+  <div id="tanque">0 L</div>
+</div>
+
+<div class="card">
+  <h2>Média KM/Mês</h2>
+  <div id="mediaMensal">0</div>
+</div>
+
+<div class="card">
+  <h2>Dias / 1000km</h2>
+  <div id="dias1000">0</div>
+</div>
+
+<div class="card">
+  <h2>Abastecimento</h2>
+  <input type="number" id="litros" placeholder="Litros">
+  <input type="number" id="valor" placeholder="Valor R$">
+  <label>
+    <input type="checkbox" id="tanqueCheio"> Tanque cheio?
+  </label>
+  <button onclick="registrarAbastecimento()">Registrar</button>
+</div>
+
+<div class="card">
+  <h2>Backup</h2>
+  <button onclick="exportBackup()">Exportar</button>
+  <input type="file" id="importFile">
+  <button onclick="importBackup()">Importar</button>
+</div>
+
+</div>
 
 <script type="module" src="app.js"></script>
 </body>
