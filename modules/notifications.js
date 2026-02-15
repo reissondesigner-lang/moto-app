@@ -5,6 +5,6 @@ import { db, doc, getDoc } from "../firebase.js";
   const data = snap.data();
 
   if (data.fuel.currentLiters < 1) {
-    alert("⚠ Tanque baixo!");
+    alert("⚠️ Tanque baixo!");
   }
 })();
