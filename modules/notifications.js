@@ -4,7 +4,7 @@ import { db, doc, getDoc } from "../firebase.js";
   const snap = await getDoc(doc(db,"motoData","main"));
   const data = snap.data();
 
-  if (data.fuel.currentLiters < 1) {
+  if (data.fuel.tankcapacity < 1.5) {
     alert("⚠️ Tanque baixo!");
   }
 })();
